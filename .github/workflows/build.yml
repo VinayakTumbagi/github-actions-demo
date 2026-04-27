@@ -28,6 +28,10 @@ jobs:
         cache: 'npm'
         cache-dependency-path: package-lock.json
     - run: npm ci
+
+
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
     - name: Run tests
       run: npm run test:ci
       
